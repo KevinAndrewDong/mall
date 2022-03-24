@@ -16,6 +16,10 @@ export default {
     Header,
     Footer,
   },
+  mounted() {
+    //派发action，获取三级列表数据
+    this.$store.dispatch("categoryList");
+  },
 };
 </script>
 
