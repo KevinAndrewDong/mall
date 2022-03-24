@@ -3,10 +3,10 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import Home from "@/pages/Home";
-import Login from "@/pages/Login";
-import Register from "@/pages/Register";
-import Search from "@/pages/Search";
+import Home from "@/views/Home";
+import Login from "@/views/Login";
+import Register from "@/views/Register";
+import Search from "@/views/Search";
 
 //重写VueRouter原型对象的push
 let originPush = VueRouter.prototype.push;

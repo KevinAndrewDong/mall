@@ -1,4 +1,5 @@
-import requests from "@/api/request";
+import requests from "@/api/ajax";
+import mockRequests from "@/api/mockAjax";
 
 // /api/product/getBaseCategoryList get
 export const reqCategoryList = () => {
@@ -7,3 +8,7 @@ export const reqCategoryList = () => {
     method: "GET",
   });
 };
+
+export const reqGetBannerList = () => mockRequests.get("/banner");
+
+export const reqFloorList = () => mockRequests.get("/floor");
