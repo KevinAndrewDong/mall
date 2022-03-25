@@ -7,6 +7,10 @@ import store from "@/store";
 import TypeNav from "@/components/TypeNav";
 Vue.component(TypeNav.name, TypeNav);
 
+//轮播图
+import Carousel from "@/components/Carousel";
+Vue.component(Carousel.name, Carousel);
+
 Vue.config.productionTip = false;
 
 import "@/mock/mockServe";
