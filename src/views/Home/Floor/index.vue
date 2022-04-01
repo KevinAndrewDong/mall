@@ -59,7 +59,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "Floor",
   props: ["list"],
 };
 </script>
