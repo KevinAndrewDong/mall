@@ -39,6 +39,7 @@ const actions = {
   },
   async userRegister(user) {
     let result = await reqUserRegister(user);
+    console.log(result);
     if (result.code == 200) {
       return "ok";
     } else {

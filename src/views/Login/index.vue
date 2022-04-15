@@ -19,7 +19,7 @@
                 <span></span>
                 <input
                   type="text"
-                  placeholder="邮箱/用户名/手机号"
+                  placeholder="邮箱/用户名/手机号（测试账号：123）"
                   v-model="phone"
                 />
               </div>
@@ -27,7 +27,7 @@
                 <span class="pwd"></span>
                 <input
                   type="text"
-                  placeholder="请输入密码"
+                  placeholder="请输入密码（测试密码：123）"
                   v-model="password"
                 />
               </div>
@@ -66,9 +66,9 @@
         <li>联系客服</li>
         <li>商家入驻</li>
         <li>营销中心</li>
-        <li>手机尚品汇</li>
+        <li>手机微商城</li>
         <li>销售联盟</li>
-        <li>尚品汇社区</li>
+        <li>微商城社区</li>
       </ul>
     </div>
   </div>
@@ -84,13 +84,15 @@ export default {
     };
   },
   methods: {
-    userLogin() {
+    async userLogin() {
       try {
         const { phone, password } = this;
         phone &&
           password &&
-          this.$store.dispatch("userLogin", { phone, password });
-        this.$router.push("/home");
+          (await this.$store.dispatch("userLogin", { phone, password }));
+        //登陆的路由组件： 如果路由包含query参数，跳转
+        let toPath = this.$route.query.redirect || "/home";
+        this.$router.push(toPath);
       } catch (error) {
         alert(error.message);
       }

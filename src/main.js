@@ -24,8 +24,15 @@ Vue.component(Pagination.name, Pagination);
 Vue.config.productionTip = false;
 
 import "@/mock/mockServe";
+//引入swiper样式
 import "swiper/css/swiper.css";
 import * as API from "@/api";
+
+import VueLazyload from "vue-lazyload";
+import atm from "@/assets/images/loading.png";
+Vue.use(VueLazyload, {
+  loading: atm,
+});
 
 new Vue({
   render: (h) => h(App),

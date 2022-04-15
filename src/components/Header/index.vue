@@ -4,7 +4,7 @@
     <div class="top">
       <div class="container">
         <div class="loginList">
-          <p>尚品汇欢迎您！</p>
+          <p>微商城欢迎您！</p>
           <p v-if="!userName">
             <span>请</span>
             <router-link to="/login">登陆</router-link>
@@ -17,12 +17,12 @@
         </div>
 
         <div class="typeList">
-          <a href="###">我的订单</a>
-          <a href="###">我的购物车</a>
-          <a href="###">我的尚品汇</a>
-          <a href="###">尚品汇会员</a>
+          <router-link to="/center">我的订单</router-link>
+          <router-link to="/shopcart">我的购物车</router-link>
+          <a href="###">我的微商城</a>
+          <a href="###">微商城会员</a>
           <a href="###">企业采购</a>
-          <a href="###">关注尚品汇</a>
+          <a href="https://github.com/KevinAndrewDong/mall">关注微商城</a>
           <a href="###">合作招商</a>
           <a href="###">商家后台</a>
         </div>

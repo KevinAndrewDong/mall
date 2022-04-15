@@ -16,10 +16,7 @@
       <div class="content">
         <label>验证码:</label>
         <input name="code" placeholder="请输入验证码" v-model="code" />
-        <button
-          style="width: 100px; height: 38px; display: inline"
-          @click="getCode"
-        >
+        <button style="width: 70px; height: 38px" @click="getCode">
           获取验证码
         </button>
         <span class="error-msg"></span>
@@ -44,7 +41,7 @@
       </div>
       <div class="controls">
         <input name="m1" type="checkbox" v-model="agree" />
-        <span>同意协议并注册《尚品汇用户协议》</span>
+        <span>同意协议并注册《微商城用户协议》</span>
         <span class="error-msg"></span>
       </div>
       <div class="btn">
@@ -60,9 +57,9 @@
         <li>联系客服</li>
         <li>商家入驻</li>
         <li>营销中心</li>
-        <li>手机尚品汇</li>
+        <li>手机微商城</li>
         <li>销售联盟</li>
-        <li>尚品汇社区</li>
+        <li>微商城社区</li>
       </ul>
     </div>
   </div>
