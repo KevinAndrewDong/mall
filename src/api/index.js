@@ -2,6 +2,7 @@ import requests from "@/api/ajax";
 import mockRequests from "@/api/mockAjax";
 
 // /api/product/getBaseCategoryList get
+// http://gmall-h5-api.atguigu.cn/api/product/getBaseCategoryList
 export const reqCategoryList = () => {
   return requests({
     url: "/product/getBaseCategoryList",

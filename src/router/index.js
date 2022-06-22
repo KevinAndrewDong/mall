@@ -55,7 +55,7 @@ router.beforeEach(async (to, from, next) => {
       if (name) {
         next();
       } else {
-        //登陆了没有用户信息 -路由跳转前获取用户信息并放行
+        //登陆了没有用户信息 -路由跳转前获取用户信息,放行
         try {
           await store.dispatch("getUserInfo");
           next();
@@ -69,6 +69,7 @@ router.beforeEach(async (to, from, next) => {
   } else {
     let toPath = to.path;
     if (
+      // 未登陆跳转
       toPath.indexOf("/trade") !== -1 ||
       toPath.indexOf("/pay") !== -1 ||
       toPath.indexOf("/center") !== -1
